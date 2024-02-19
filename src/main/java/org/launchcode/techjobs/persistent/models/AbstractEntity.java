@@ -8,17 +8,25 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 import java.util.Objects;
-
+@MappedSuperclass
 public abstract class AbstractEntity {
-
+    @Id
+    @GeneratedValue
     private int id;
-
+    @Size
+    @NotNull
     private String name;
-
+    @Id
+    @GeneratedValue
     public int getId() {
         return id;
     }
 
+
+    public void setId(Integer id) {this.id = id;}
+
+    @Size
+    @NotNull
     public String getName() {
         return name;
     }
