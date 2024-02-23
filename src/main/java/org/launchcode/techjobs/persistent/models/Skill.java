@@ -11,6 +11,14 @@ public class Skill extends AbstractEntity {
     private List<Job> jobs = new ArrayList<>();
     private String description;
 
+    public Skill(String name) {
+        super(name);
+    }
+
+    public Skill() {
+
+    }
+
     public void setDescription(String description) {
         this.description = description;
     }

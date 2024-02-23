@@ -18,8 +18,20 @@ public class Employer extends AbstractEntity {
     @NotNull
     private String location;
 
-    public Employer() {
+    public Employer(String name , String location) {
+        super(name);
+       this.location = location;
+    }
 
+    public Employer() {
+    }
+
+    public List<Job> getJobs() {
+        return jobs;
+    }
+
+    public void setJobs(List<Job> jobs) {
+        this.jobs = jobs;
     }
 
     public String getLocation() {

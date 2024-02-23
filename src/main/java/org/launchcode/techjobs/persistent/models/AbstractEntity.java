@@ -16,14 +16,19 @@ public abstract class AbstractEntity {
     @Size
     @NotNull
     private String name;
-    @Id
-    @GeneratedValue
+
     public int getId() {
         return id;
     }
 
-
+      public AbstractEntity (String name) {
+        this.name = name;
+    }
     public void setId(Integer id) {this.id = id;}
+
+    public AbstractEntity() {
+
+    }
 
     @Size
     @NotNull
